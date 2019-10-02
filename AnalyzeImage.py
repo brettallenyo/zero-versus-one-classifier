@@ -46,24 +46,24 @@ class Analyze:
 
 if __name__ == '__main__':
 	'''
-	im = Image.Image.load('/Users/brettallen/Documents/CodingProjects/zero-versus-one/TestZeros/NotesZero.png')
+	im = Image.Image.load('/Users/brettallen/Documents/CodingProjects/zero-versus-one-classifier/TestZeros/NotesZero.png')
 	analytics = Analyze(im)
 	print(analytics.analyze())
 
-	im = Image.Image.load('/Users/brettallen/Documents/CodingProjects/zero-versus-one/TestOnes/NotesOne.png')
+	im = Image.Image.load('/Users/brettallen/Documents/CodingProjects/zero-versus-one-classifier/TestOnes/NotesOne.png')
 	analytics = Analyze(im)
 	print(analytics.analyze())
 	'''
 	failed = []
 
-	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one/TestZeros'
+	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one-classifier/TestZeros'
 	for subdir, dirs, files in os.walk(rootdir):
 		for file in files:
 			analytics = Analyze(Image.Image.load(os.path.join(subdir, file)))
 			if(analytics.analyze() != 0):
 				failed.append(file)
 
-	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one/TestOnes'
+	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one-classifier/TestOnes'
 	for subdir, dirs, files in os.walk(rootdir):
 		for file in files:
 			analytics = Analyze(Image.Image.load(os.path.join(subdir, file)))

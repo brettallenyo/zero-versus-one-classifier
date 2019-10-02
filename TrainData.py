@@ -65,13 +65,13 @@ class Train:
 
 if __name__ == '__main__':
 
-	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one/TrainOnes'
+	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one-classifier/TrainOnes'
 	one_images = []
 	for subdir, dirs, files in os.walk(rootdir):
 		for file in files:
 			one_images.append(Image.Image.load(os.path.join(subdir, file)))
 
-	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one/TrainZeros'
+	rootdir = '/Users/brettallen/Documents/CodingProjects/zero-versus-one-classifier/TrainZeros'
 	zero_images = []
 	for subdir, dirs, files in os.walk(rootdir):
 		for file in files:
